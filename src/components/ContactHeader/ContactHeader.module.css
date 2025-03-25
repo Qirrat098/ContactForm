@@ -1,0 +1,88 @@
+.contactHeader {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align elements horizontally */
+    text-align: center; /* Center the text */
+    padding: 40px 20px; /* Add padding to the section */
+    background-color: #f9f9f9; /* Light background for better contrast */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin: 20px auto; /* Center the section horizontally */
+    max-width: 800px; /* Limit the width of the section */
+    opacity: 0; /* Start invisible */
+    transform: translateY(-50px); /* Start slightly above */
+    animation: slideIn 0.8s ease-out forwards; /* Apply the animation */
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px); /* Start above */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the original position */
+    }
+}
+
+.contactHeader h1 {
+    font-size: 48px; /* Large font size for the heading */
+    font-weight: 800; /* Bold font weight */
+    color: #333; /* Darker color for better readability */
+    margin-bottom: 16px; /* Add space below the heading */
+}
+
+.contactHeader p {
+    font-size: 18px; /* Slightly larger font size for the paragraph */
+    font-weight: 400; /* Normal font weight */
+    color: #555; /* Softer color for the paragraph */
+    line-height: 1.6; /* Increase line height for better readability */
+    margin-bottom: 20px; /* Add space below the paragraph */
+}
+
+.logo {
+    margin-bottom: 20px; /* Add space below the logo */
+    width: 100px; /* Set a fixed width for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contactHeader {
+        padding: 30px 15px; /* Reduce padding for smaller screens */
+    }
+
+    .contactHeader h1 {
+        font-size: 36px; /* Reduce font size for the heading */
+    }
+
+    .contactHeader p {
+        font-size: 16px; /* Reduce font size for the paragraph */
+    }
+
+    .logo {
+        width: 80px; /* Reduce logo size */
+    }
+}
+
+@media (max-width: 480px) {
+    .contactHeader {
+        padding: 20px 10px; /* Further reduce padding for very small screens */
+    }
+
+    .contactHeader h1 {
+        font-size: 28px; /* Further reduce font size for the heading */
+    }
+
+    .contactHeader p {
+        font-size: 14px; /* Further reduce font size for the paragraph */
+    }
+
+    .logo {
+        width: 60px; /* Further reduce logo size */
+    }
+}
+
+body{
+    overflow: hidden;
+}
